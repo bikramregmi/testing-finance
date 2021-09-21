@@ -15,10 +15,10 @@
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
 		destroy-method="close">
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
-		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/tmk_mobilebanking?UseUnicode=true&amp;characterEncoding=utf8" />
+		<property name="jdbcUrl" value="jdbc:mysql://gwbtbbyzo5f6cvim:rowm8gsqdtka28ub@esilxl0nthgloe1y.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/woqidnraprw3yc7r?UseUnicode=true&amp;characterEncoding=utf8" />
 		<!-- local server credentials -->
-		<property name="user" value="root" />
-		<property name="password" value="" />
+		<property name="user" value="gwbtbbyzo5f6cvim" />
+		<property name="password" value="rowm8gsqdtka28ub" />
 
 	 	<!-- test server credentials -->
 		<!-- <property name="user" value="root" />
