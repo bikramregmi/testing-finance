@@ -1,0 +1,45 @@
+@CHARSET "UTF-8";
+
+@media print {
+	.print-header {
+		margin-top: 70px;
+	}
+	.print-header .title {
+		font-size: 30px !important;
+		position: relative;
+		left: 10%;
+		transform: translateX(-50%);
+	}
+	.print-header .mbank-logo {
+		left: 30%;
+		position: relative;
+		transform: translate(-50%);
+	}
+	.print-header .service-logo {
+		left: 30%;
+		position: relative;
+		transform: translate(-50%);
+	}
+	.print-body {
+		margin-top: 50px;
+	}
+	table {
+		margin-top: 10px;
+	}
+	td {
+		width: 50%;
+	}
+	hr {
+		border: 1px solid black;
+	}
+	.print-footer {
+		margin-top: 80px;
+		text-align: center;
+	}
+	.enteredBy {
+		font-size: 15px;
+	}
+	.company-seal {
+		margin-top: 40px;
+	}
+}

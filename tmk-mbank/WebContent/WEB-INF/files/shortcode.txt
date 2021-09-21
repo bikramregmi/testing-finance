@@ -1,0 +1,3 @@
+null This is token
+there is an exception
+ java.io.PrintStream@1e7e8f87

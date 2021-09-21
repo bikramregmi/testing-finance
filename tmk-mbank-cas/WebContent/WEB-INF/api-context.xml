@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:task="http://www.springframework.org/schema/task" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+						http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd">
+	<bean id="validator"
+		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+
+	<bean id="userApi" class="com.cas.api.impl.UserApi">
+		<constructor-arg ref="userRepository" />
+		<constructor-arg ref="passwordEncoder" />
+		<constructor-arg ref="sessionLogApi" />
+	</bean>
+
+	<bean id="sessionLogApi" class="com.cas.api.impl.SessionLogApi">
+		<constructor-arg ref="sessionLogRepository" />
+		<constructor-arg ref="sessionApi" />
+	</bean>
+
+	<bean id="sessionApi" class="com.cas.api.impl.SessionApi">
+		<constructor-arg ref="userSessionRepository" />
+		<constructor-arg ref="userRepository" />
+		<constructor-arg value="30" />
+	</bean>
+	
+	<bean id="authenticationApi" class="com.cas.api.impl.AuthenticationApi">
+		<constructor-arg ref="authenticationManager" />
+		<constructor-arg ref="userApi" />
+		<constructor-arg ref="sls" />
+	</bean>
+	
+	<bean id="accountApi" class="com.cas.api.impl.AccountApi">
+		<constructor-arg ref="accountRepository" />
+		<constructor-arg ref="countryRepository" />
+	</bean>
+	
+	<bean id="transactionApi" class="com.cas.api.impl.TransactionApi">
+		<constructor-arg ref="transactionRepository" />
+		<constructor-arg ref="accountApi" />
+		<constructor-arg ref="accountRepository" />
+	</bean>
+	
+	<!-- VALIDATION -->
+	<bean id="transactionValidation" class="com.cas.validation.TransactionValidation">
+	    <constructor-arg ref="accountApi" />
+		<constructor-arg ref="transactionApi" />
+	</bean>
+
+
+
+</beans>

@@ -1,0 +1,311 @@
+.test{
+	border: solid 1px black;
+}
+
+
+body{
+	font-family: "Roboto", sans-serif !important;
+}
+
+li{
+	list-style: none !important;
+}
+
+a{
+	text-decoration: none !important;
+}
+
+#sidenav ul{
+	margin-left: -20px;
+	height: 100%;
+}
+
+#sidenav{
+	color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 15%;
+	background-color: #404e55;
+	height: 100%;
+}
+
+
+
+.swiper-slide .center{
+	max-height: 100%;  
+    max-width: 100%; 
+    width: auto;
+    height: auto;
+    position: absolute;  
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    margin: auto;
+}
+
+.subscription{
+	padding-top: 125px;
+}
+
+.fav-transaction-title{
+	font-weight: 200;
+	font-size: 16pt;
+	line-height: 18pt;
+}
+
+.fav-transaction-amount{
+	font-weight: 300;
+	font-size: 13pt;
+}
+
+
+/*SWIPER*/
+
+  .swiper-container {
+        /*width: 300px;*/
+        /*height: 300px;*/
+        /*padding: 50px;*/
+    }
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+    }
+
+/*--------------*/
+
+/*USER INFO*/
+
+.user-info-block{
+	background-color: rgba(0,0,0,0.3);
+	padding: 20px;
+	height: 90px;
+}
+
+.user-name{
+	font-size: 13pt;
+	font-weight: 300;
+}
+
+.user-number{
+	opacity: 0.6;
+}
+
+.userimage{
+	display: block;
+	width: 50px;
+	border-radius: 50px;
+	float: left;
+	margin-right: 10px;
+}
+
+#sidenav ul li a{
+	color: #fff;
+	display: block;
+	opacity: 0.7;
+	padding: 22px 0px 22px 60px;
+	border-bottom: solid 1px rgba(255,255,255,0.07);
+	font-size: 15pt;
+	font-weight: 300;
+	
+	/*letter-spacing: 0.5pt;*/
+}
+
+#sidenav ul li a:hover{
+	/*color: black;*/
+	opacity: 1.0;
+}
+
+/*SIDE NAV ICONS*/
+
+.sidenav-icon{
+	background-size: 35px !important;
+	background-repeat: no-repeat !important;
+	background-position: 0px center!important;
+	
+}
+
+/*.sidenav-icon:hover{
+	background-size: 45px !important;
+	transition: .2s; 
+}
+*/
+.icon-dashboard{
+	background: url("../../images/customer/icon-dashboard.png");
+}
+
+.icon-favorite{
+	background: url("../../images/customer/icon-favorite.png");
+}
+
+.icon-paybills{
+	background: url("../../images/customer/icon-paybills.png");
+}
+
+.icon-dashboard{
+	background: url("../../images/customer/icon-dashboard.png");
+}
+
+.icon-loadfunds{
+	background: url("../../images/customer/icon-loadfunds.png");
+}
+
+.icon-transfer{
+	background: url("../../images/customer/icon-transfer.png");
+}
+
+.icon-withdraw{
+	background: url("../../images/customer/icon-withdraw.png");
+}
+
+.icon-history{
+	background: url("../../images/customer/icon-history.png");
+}
+
+.icon-invoices{
+	background: url("../../images/customer/icon-invoices.png");
+}
+
+.icon-settings{
+	background: url("../../images/customer/icon-settings.png");
+}
+
+/*--------------*/
+
+.topbar{
+	width: 85%;
+	/*height: 50px;*/
+	margin-left: 15%;
+	/*background-color: #ddd;*/
+	padding: 20px 30px 0px 30px;
+}
+
+.icon-live{
+	display: block;
+	border-radius: 55px;
+	width: 55px;
+	height: 55px;
+	padding: 10px;
+	background: url("../../images/customer/icon-live.png") center center no-repeat;
+	background-size: 40px;
+	background-color: #01bc13;
+	float: right;
+	position: fixed;
+	top: 20px;
+	right: 30px;
+	z-index: 3;
+}
+
+.container-main{
+	width: 85%;
+	margin-left: 15%;
+	padding: 45px 30px;
+	
+}
+
+
+/*BLOCKS*/
+
+.block{
+	color: #fff;
+	height: 300px;
+	margin-bottom: 30px;
+	/*background-color: #ddd;*/
+
+}
+
+
+
+
+a.block-link-sm, a.block-link-sm:visited, a.block-link-sm:active{
+	font-size: 12pt;
+	display: inline-block;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.current-balance{
+	/*color: red !important;*/
+	font-size: 33pt;
+	font-weight: 300;
+	display: block;
+	padding: 100px 0px;
+	line-height: 35px;
+}
+
+.block-text-sm{
+	font-size: 13pt;
+	font-weight: 400;
+}
+
+.block-text-hero{
+	font-size: 26pt;
+	line-height: 33pt;
+	font-weight: 300;
+	display: inline-block;
+	padding-top: 25px;
+}
+
+
+.icon-padding-sm{
+	margin-right: 10px;
+}
+
+/*--------*/
+
+
+.green{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#03cf35+0,03cf35+46,a3f539+99 */
+background: #03cf35; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #03cf35 0%, #03cf35 46%, #a3f539 99%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #03cf35 0%,#03cf35 46%,#a3f539 99%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  #03cf35 0%,#03cf35 46%,#a3f539 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03cf35', endColorstr='#a3f539',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.blue{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00a6d4+0,00e3be+100 */
+background: #00a6d4; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #00a6d4 0%, #00e3be 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #00a6d4 0%,#00e3be 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  #00a6d4 0%,#00e3be 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a6d4', endColorstr='#00e3be',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.orange{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff750f+0,ff750f+55,fabd41+100 */
+background: #ff750f; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #ff750f 0%, #ff750f 55%, #fabd41 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #ff750f 0%,#ff750f 55%,#fabd41 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  #ff750f 0%,#ff750f 55%,#fabd41 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff750f', endColorstr='#fabd41',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.pink{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ea3259+0,fc5d2c+100 */
+background: #ea3259; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #ea3259 0%, #fc5d2c 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #ea3259 0%,#fc5d2c 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  #ea3259 0%,#fc5d2c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea3259', endColorstr='#fc5d2c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.lime{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#98a109+0,98a109+50,f5c43e+100 */
+background: #98a109; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #98a109 0%, #98a109 50%, #f5c43e 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #98a109 0%,#98a109 50%,#f5c43e 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  #98a109 0%,#98a109 50%,#f5c43e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#98a109', endColorstr='#f5c43e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.grey{
+	background-color: #495554;
+}

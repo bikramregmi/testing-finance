@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd	
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		 http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- <bean id="customerController" class="com.wallet.controller.CustomerController">
+		<constructor-arg ref="customerApi" />
+		<constructor-arg ref="customerValidation" />
+		<constructor-arg ref="countryApi" />
+	</bean>
+	<bean id="menuController" class="com.wallet.controller.MenuController">
+		<constructor-arg ref="menuApi" />
+		<constructor-arg ref="menuValidation"/>
+	</bean>
+	<bean id="userController" class="com.wallet.controller.UserController">
+		<constructor-arg ref="userApi" />
+		<constructor-arg ref="userValidation" />
+		<constructor-arg ref="passwordEncoder" />	
+	</bean>
+	<bean id="mainController" class="com.wallet.controller.MainController">
+		<constructor-arg ref="customerApi" />
+	</bean>
+	<bean id="agentController" class="com.wallet.controller.AgentController">
+		<constructor-arg ref="agentApi" />
+		<constructor-arg ref="agentValidation" />
+		 <constructor-arg ref="superAgentApi"/>
+		 <constructor-arg ref="countryApi" />
+		 <constructor-arg ref="stateApi" />
+		 <constructor-arg ref="cityApi" />
+	</bean>
+	
+	<bean id="countryController" class="com.wallet.controller.CountryController">
+		<constructor-arg ref="countryApi"></constructor-arg>
+		<constructor-arg ref="countryValidation"></constructor-arg>
+		<constructor-arg ref="currencyApi"></constructor-arg>
+	</bean>
+	
+	<bean id="superAgentController" class="com.wallet.controller.SuperAgentController">
+		<constructor-arg ref="superAgentApi" />
+		<constructor-arg ref="superAgentValidation" />
+		<constructor-arg ref="cityApi" />
+		<constructor-arg ref="countryApi"/>
+		
+	</bean>
+	<bean id="commissionController" class="com.wallet.controller.CommissionController">
+	    <constructor-arg ref="commissionApi"/>
+	    <constructor-arg ref="commissionValidation"/>
+	    <constructor-arg ref="superAgentApi"/>
+	</bean>
+	<bean id="stateController" class="com.wallet.controller.StateController">
+	    <constructor-arg ref="stateApi"/>
+	    <constructor-arg ref="stateValidation"/>
+		<constructor-arg ref="countryApi" />
+	</bean>
+	<bean id="cityController" class="com.wallet.controller.CityController">
+	    <constructor-arg ref="cityApi"/>
+	    <constructor-arg ref="cityValidation"/>
+	    <constructor-arg ref="stateApi" />
+	</bean>
+	<bean id="exchangeRateController" class="com.wallet.controller.ExchangeRateController">
+	    <constructor-arg ref="exchangeRateApi"/>
+	    <constructor-arg ref="exchangeRateValidation"/>
+		<constructor-arg ref="currencyApi" />
+		<constructor-arg ref="countryApi" />
+		<constructor-arg ref="superAgentApi"/>
+		<constructor-arg ref="agentApi" />
+	</bean>
+	<bean id="complianceController" class="com.wallet.controller.ComplianceController">
+	    <constructor-arg ref="complianceApi"/>
+	    <constructor-arg ref="complianceValidation"/>
+		<constructor-arg ref="countryApi" />
+	</bean>
+	
+	<bean id="amlController" class="com.wallet.controller.AmlController">
+	    <constructor-arg ref="amlApi"/>
+	    <constructor-arg ref="amlValidation"/>
+		<constructor-arg ref="userApi" />
+		<constructor-arg ref="amluploadValidation" />
+		<constructor-arg ref="unclxmlParser" />
+		<constructor-arg ref="ofacxmlParser" />
+		<constructor-arg ref="euclxmlparser" />
+		<constructor-arg ref="ofsixmlparser" />
+		<constructor-arg ref="auclxlsParser" />
+		
+		
+	</bean>	
+	<bean id="discountController" class="com.wallet.controller.DiscountController">
+	    <constructor-arg ref="discountApi"/>
+	    <constructor-arg ref="discountValidation"/>
+	    <constructor-arg ref="superAgentApi"/>
+	</bean>
+	<bean id="bankController" class="com.wallet.controller.BankController">
+	    <constructor-arg ref="bankApi"/>
+	    <constructor-arg ref="bankValidation"/>
+	    <constructor-arg ref="countryApi" />
+	</bean>
+	<bean id="branchController" class="com.wallet.controller.BranchController">
+	    <constructor-arg ref="branchApi"/>
+	    <constructor-arg ref="branchValidation"/>
+	    <constructor-arg ref="bankApi" />
+		<constructor-arg ref="cityApi" />
+	</bean>
+	<bean id="bankAccountController" class="com.wallet.controller.BankAccountController">
+	    <constructor-arg ref="bankAccountApi"/>
+	    <constructor-arg ref="bankAccountRepository"/>
+	    <constructor-arg ref="bankAccountValidation"/>
+		 <constructor-arg ref="bankApi"/>
+		  <constructor-arg ref="branchApi"/>
+		  <constructor-arg ref="userApi" />
+	</bean>
+	<bean id="currencyController" class="com.wallet.controller.CurrencyController">
+		<constructor-arg ref="currencyApi"></constructor-arg>
+		<constructor-arg ref="currencyValidation"></constructor-arg>
+	</bean>
+	<bean id="transactionController" class="com.wallet.controller.TransactionController">
+	    <constructor-arg ref="transactionApi" />
+	    <constructor-arg ref="transactionRepository" />
+	    <constructor-arg ref="transactionValidation" />
+		<constructor-arg ref="currencyApi" />
+		<constructor-arg ref="countryApi" />
+		<constructor-arg ref="superAgentApi"/>
+		<constructor-arg ref="agentApi" />
+		<constructor-arg ref="userApi" />
+		<constructor-arg ref="customerApi" />
+		<constructor-arg ref="amlApi"/>	
+		<constructor-arg ref="complianceApi"/>	
+		<constructor-arg ref="exchangeRateApi"/>	
+		<constructor-arg ref="discountApi"/>	
+		<constructor-arg ref="commissionApi"/>	
+		<constructor-arg ref="bankApi"/>
+		<constructor-arg ref="branchApi"/>
+	</bean>
+	<bean id="webServiceController" class="com.wallet.controller.WebServiceController">
+	    <constructor-arg ref="webServiceApi" />
+	     <constructor-arg ref="webServiceValidation" />
+    </bean>
+	<bean id="menuTemplateController" class="com.wallet.controller.MenuTemplateController">
+		<constructor-arg ref="menuTemplateApi" />
+		<constructor-arg ref="menuApi" />
+		<constructor-arg ref="userApi" />
+		<constructor-arg ref="menuTemplateValidation"/>
+	</bean>
+	
+	<bean id="userTemplateController" class="com.wallet.controller.UserTemplateController">
+		<constructor-arg ref="userTemplateApi" />
+		<constructor-arg ref="userTemplateRepository" />
+		<constructor-arg ref="menuTemplateApi" />
+		<constructor-arg ref="userApi" />
+	</bean>
+	
+	<bean id="reportController" class="com.wallet.controller.ReportController">
+		<constructor-arg ref="customerApi" />
+		<constructor-arg ref="agentApi" />
+		<constructor-arg ref="superAgentApi" />
+		<constructor-arg ref="transactionApi" />
+	</bean>
+	
+	 WEB SERVICES 
+	<bean id="authenticationController" class="com.wallet.webservice.AuthenticationController">
+		<constructor-arg ref="webServiceApi" />
+		<constructor-arg ref="userApi" />
+		<constructor-arg ref="authenticationManager" />
+	</bean>
+	
+	<bean id="transactionRestController" class="com.wallet.webservice.TransactionRestController">
+		<constructor-arg ref="userApi" />
+		<constructor-arg ref="transactionApi" />
+		<constructor-arg ref="transactionValidation" />
+	</bean>
+	JASPER REPORT 
+	
+	<bean id="jasperController" class="com.wallet.controller.JasperController">
+		<constructor-arg ref="customerApi" />
+		<constructor-arg ref="agentApi" />
+		<constructor-arg ref="superAgentApi" />
+		<constructor-arg ref="transactionApi" />
+	</bean>
+	
+	<bean id="userAjaxController" class="com.wallet.controller.UserAjaxController">
+		<constructor-arg ref="agentApi" />
+		<constructor-arg ref="superAgentApi" />
+		<constructor-arg ref="customerApi" />
+	</bean> -->
+</beans>

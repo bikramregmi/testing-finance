@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:task="http://www.springframework.org/schema/task" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+						http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd">
+
+	<bean id="validator"
+		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+
+
+	<!-- Session Handler -->
+	<bean id="sessionLogApi" class="com.mobilebanking.api.impl.SessionLogApi">
+		<constructor-arg ref="sessionLogRepository" />
+		<constructor-arg ref="sessionApi" />
+	</bean>
+
+	<bean id="unclxmlParser" class="com.mobilebanking.parser.UnclXmlParser">
+
+	</bean>
+	<bean id="ofacxmlParser" class="com.mobilebanking.parser.OfacXmlParser">
+
+	</bean>
+	<bean id="euclxmlparser" class="com.mobilebanking.parser.EuclXmlParser">
+
+	</bean>
+	<bean id="ofsixmlparser" class="com.mobilebanking.parser.OfsiXmlparser">
+
+	</bean>
+	<bean id="auclxlsParser" class="com.mobilebanking.parser.AuclXlsParser">
+	</bean>
+
+	<bean id="webServiceApi" class="com.mobilebanking.api.impl.WebServiceApi">
+		<constructor-arg ref="webServiceRepository" />
+	</bean>
+
+	<bean id="sessionApi" class="com.mobilebanking.api.impl.SessionApi">
+		<constructor-arg ref="userSessionRepository" />
+		<constructor-arg ref="userRepository" />
+		<constructor-arg value="0" />
+	</bean>
+
+	<bean id="customerApi" class="com.mobilebanking.api.impl.CustomerApi">
+		<constructor-arg ref="customerRepository" />
+		<constructor-arg ref="countryRepository" />
+	</bean>
+
+	<bean id="menuApi" class="com.mobilebanking.api.impl.MenuApi">
+		<constructor-arg ref="menuRepository" />
+	</bean>
+
+	<bean id="currencyApi" class="com.mobilebanking.api.impl.CurrencyApi">
+		<constructor-arg ref="currencyRepository" />
+	</bean>
+
+	<bean id="userApi" class="com.mobilebanking.api.impl.UserApi">
+		<constructor-arg ref="userRepository" />
+		<constructor-arg ref="webServiceRepository" />
+		<constructor-arg ref="passwordEncoder" />
+	</bean>
+	
+	<bean id="agentApi" class="com.mobilebanking.api.impl.AgentApi">
+		<constructor-arg ref="agentRepository" />
+		<constructor-arg ref="superAgentRepository" />
+		<constructor-arg ref="cityRepository" />
+		<constructor-arg ref="countryRepository" />
+	</bean>
+	
+	<bean id="commissionApi" class="com.mobilebanking.api.impl.CommissionApi">
+		<constructor-arg ref="commissionRepository" />
+		<constructor-arg ref="superAgentRepository" />
+	</bean>
+
+	<bean id="countryApi" class="com.mobilebanking.api.impl.CountryApi">
+		<constructor-arg ref="countryRepository" />
+		<constructor-arg ref="currencyRepository" />
+	</bean>
+
+	<bean id="superAgentApi" class="com.mobilebanking.api.impl.SuperAgentApi">
+		<constructor-arg ref="superAgentRepository" />
+		<constructor-arg ref="cityRepository" />
+		<constructor-arg ref="userRepository" />
+	</bean>
+	
+		
+	<bean id="stateApi" class="com.mobilebanking.api.impl.StateApi">
+		<constructor-arg ref="stateRepository" />
+		<constructor-arg ref="countryRepository" />
+	</bean>
+	
+	<bean id="cityApi" class="com.mobilebanking.api.impl.CityApi">
+		<constructor-arg ref="cityRepository" />
+		<constructor-arg ref="stateRepository" />
+	</bean>
+	
+	<bean id="exchangeRateApi" class="com.mobilebanking.api.impl.ExchangeRateApi">
+		<constructor-arg ref="exchangeRateRepository" />
+		<constructor-arg ref="currencyRepository" />
+		<constructor-arg ref="countryRepository" />
+		<constructor-arg ref="superAgentRepository" />
+		<constructor-arg ref="agentRepository" />
+	</bean>
+	
+	<bean id="complianceApi" class="com.mobilebanking.api.impl.ComplianceApi">
+		<constructor-arg ref="complianceRepository" />
+		<constructor-arg ref="countryRepository" />
+	</bean>
+	
+	<bean id="amlApi" class="com.mobilebanking.api.impl.AmlApi">
+		<constructor-arg ref="amlRepository" />
+		<constructor-arg ref="userRepository" />
+
+	</bean>
+
+	<bean id="discountApi" class="com.mobilebanking.api.impl.DiscountApi">
+		<constructor-arg ref="discountRepository" />
+		<constructor-arg ref="superAgentRepository" />
+	</bean>
+
+	<bean id="bankApi" class="com.mobilebanking.api.impl.BankApi">
+		<constructor-arg ref="bankRepository" />
+		<constructor-arg ref="countryRepository" />
+	</bean>
+	
+	<bean id="branchApi" class="com.mobilebanking.api.impl.BranchApi">
+		<constructor-arg ref="branchRepository" />
+		<constructor-arg ref="bankRepository" />
+		<constructor-arg ref="cityRepository" />
+	</bean>
+	
+	<bean id="bankAccountApi" class="com.mobilebanking.api.impl.BankAccountApi">
+		<constructor-arg ref="bankAccountRepository" />
+		<constructor-arg ref="bankRepository" />
+		<constructor-arg ref="branchRepository" />
+		<constructor-arg ref="userRepository" />
+	</bean>
+	
+	<bean id="transactionApi" class="com.mobilebanking.api.impl.TransactionApi">
+		<constructor-arg ref="transactionRepository" />
+		<constructor-arg ref="currencyRepository" />
+		<constructor-arg ref="countryRepository" />
+		<constructor-arg ref="superAgentRepository" />
+		<constructor-arg ref="agentRepository" />
+		<constructor-arg ref="userRepository" />
+		<constructor-arg ref="customerRepository" />
+		<constructor-arg ref="amlRepository" />
+		<constructor-arg ref="complianceRepository" />
+		<constructor-arg ref="exchangeRateRepository" />
+		<constructor-arg ref="discountRepository" />
+		<constructor-arg ref="commissionRepository" />
+
+	</bean>
+	
+	<bean id="menuTemplateApi" class="com.mobilebanking.api.impl.MenuTemplateApi">
+		<constructor-arg ref="menuTemplateRepository" />
+		<constructor-arg ref="menuRepository" />
+		<constructor-arg ref="userRepository" />
+	</bean>
+	<bean id="userTemplateApi" class="com.mobilebanking.api.impl.UserTemplateApi">
+		<constructor-arg ref="userTemplateRepository" />
+		<constructor-arg ref="menuTemplateRepository" />
+		<constructor-arg ref="userRepository" />
+	</bean>
+	
+	
+	
+	
+
+	
+</beans>

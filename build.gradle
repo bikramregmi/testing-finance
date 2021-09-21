@@ -1,0 +1,6 @@
+description = 'This is the root project of a multi module gradle project.'
+
+subprojects {
+	apply plugin: 'idea'
+	apply plugin: 'eclipse-wtp'
+}

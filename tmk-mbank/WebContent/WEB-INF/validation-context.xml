@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<bean id="amlValidation" class="com.mobilebanking.validation.AmlValidation">
+		<constructor-arg ref="amlApi" />
+		
+	</bean>
+
+	<bean id="userValidation" class="com.mobilebanking.validation.UserValidation">
+		<constructor-arg ref="userApi" />
+		
+	</bean>
+
+	<bean id="customerValidation" class="com.mobilebanking.validation.CustomerValidation">
+		<constructor-arg ref="customerApi" />
+		
+	</bean>
+	
+	<bean id="agentValidation" class="com.mobilebanking.validation.AgentValidation">
+		<constructor-arg ref="agentApi" />
+		
+	</bean>
+	<bean id="countryValidation" class="com.mobilebanking.validation.CountryValidation">
+		<constructor-arg ref="countryApi" />
+		
+	</bean>
+	<bean id="superAgentValidation" class="com.mobilebanking.validation.SuperAgentValidation">
+		<constructor-arg ref="superAgentApi" />
+		
+	</bean>
+	<bean id="commissionValidation" class="com.mobilebanking.validation.CommissionValidation">
+		<constructor-arg ref="commissionApi" />
+		
+	</bean>
+
+	<bean id="stateValidation" class="com.mobilebanking.validation.StateValidation">
+		<constructor-arg ref="stateApi" />
+		
+	</bean>
+	<bean id="cityValidation" class="com.mobilebanking.validation.CityValidation">
+		<constructor-arg ref="cityApi" />
+		
+	</bean>
+	
+	<bean id="exchangeRateValidation" class="com.mobilebanking.validation.ExchangeRateValidation">
+		<constructor-arg ref="exchangeRateApi" />
+		
+	</bean>
+	
+	<bean id="complianceValidation" class="com.mobilebanking.validation.ComplianceValidation">
+		<constructor-arg ref="complianceApi" />
+		
+	</bean>
+	
+	<bean id="discountValidation" class="com.mobilebanking.validation.DiscountValidation">
+		<constructor-arg ref="discountApi" />
+	</bean>
+	
+	<bean id="bankValidation" class="com.mobilebanking.validation.BankValidation">
+		<constructor-arg ref="bankApi" />
+	</bean>
+	
+	<bean id="branchValidation" class="com.mobilebanking.validation.BranchValidation">
+		<constructor-arg ref="branchApi" />
+	</bean>
+	
+	<bean id="bankAccountValidation" class="com.mobilebanking.validation.BankAccountValidation">
+		<constructor-arg ref="bankAccountApi" />
+		
+	</bean>
+	<bean id="currencyValidation" class="com.mobilebanking.validation.CurrencyValidation">
+		<constructor-arg ref="currencyApi" />
+		
+	</bean>
+	
+	<bean id="menuValidation" class="com.wallet.validation.MenuValidation">
+		<constructor-arg ref="menuApi"/>
+	</bean>
+	
+	<bean id="menuTemplateValidation" class="com.wallet.validation.MenuTemplateValidation">
+		<constructor-arg ref="menuTemplateApi"/>
+	</bean>
+	
+	<bean id="webServiceValidation" class="com.wallet.validation.WebServiceValidation">
+		<constructor-arg ref="webServiceRepository" />
+	</bean>
+
+	<bean id="transactionValidation" class="com.wallet.validation.TransactionValidation">
+		<constructor-arg ref="transactionApi" />
+		<constructor-arg ref="transactionRepository" />
+		<constructor-arg ref="commissionRepository" />
+		<constructor-arg ref="userRepository" />
+		<constructor-arg ref="agentRepository" />
+		<constructor-arg ref="superAgentRepository" />
+	</bean>
+	
+	<bean id="amluploadValidation" class="com.wallet.validation.AmlUploadValidation">
+	</bean>
+	
+</beans>

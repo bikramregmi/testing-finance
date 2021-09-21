@@ -1,0 +1,188 @@
+@charset "utf-8";
+/* CSS Document */
+
+*		{ margin:0; padding:0; outline:none; }
+body		{ color:#5a5a59; font-size:13px; background:#fff;}
+.no-right-margin		{ margin-right:0 !important;}
+.no-left-margin		  { margin-left:0 !important;}
+.no-top-margin			{ margin-top:0 !important}
+.no-top-padding			{ padding-top:0 !important;}
+.no-bottom-padding		{ padding-bottom:0 !important;}
+.no-left-padding		{ padding-left:0 !important;}
+.no-right-padding			{ padding-right:0 !important;}
+.float-left					{ float:left;}
+h1, .h1						{ font-size:30px; color:#000;}
+h2, .h2						{ font-size:28px; color:#000;}
+h3, .h3						{ font-size:22px; }
+h4, .h4						{ font-size:16px; }
+.clear						{ clear:both;}
+
+
+
+/*************************BACKGROUND******************************************/
+										
+.light-green		{  background-color:#74a300;}
+.dark-green			{ background-color:#578202;}
+.yellow				{ background-color:#e8d506;}
+.light-gray			{ background-color:#e1e0dd !important}
+.search	input			{ border-left:3px solid #74a300; border-right:3px solid #74a300; color:#8c8585; }
+.search-icon		{ width:20px; height:20px; display:block; position:absolute; background:url(../images/search.png); right:19%; top:0px;}
+.light, .payment li					{ background:#eae9e3;}
+.black ,.heading6						{ background:#000;}
+ .text-side, .dark, .today-transation h1				{ color:#fff;}
+.tap-money, .activation a		{ color:#000;}
+.green-color, .term h2						{ color:#74a300;}
+.send-money				{ background:#fff;}
+
+/*button*/
+.gren-btn			{ border:none; display:inline-block; padding:10px 40px; color:#fff;}
+
+/*****************************HEADER***********************************/
+.search li			{ float:left; list-style:none; margin-right:20px;}
+.search				{ margin-top:20px;}
+header				{ padding-top:20px;}
+.relative-serach		{ position:relative; display:block;}
+.search input		{ border-top:0; border-bottom:0; padding:2px 5px; display:block; min-width:230px;}
+.login-form  h2		{ font-size:16px; font-weight:bold; background:url(../images/login.png) left center no-repeat; padding:10px 10px 10px 50px;}
+.activation 		{ font-size:13px; color:#000; font-weight:bold; background:url(../images/key.png) no-repeat left center; padding:10px 10px 10px 25px; margin-top:25px;}
+.input input				{ width:80%; display:inline-block; float:left; padding:5px;}
+.login-user-icon , .login-lock-icon			{ background-image:url(../images/user.png);background-repeat:no-repeat; padding:16px; display:block; float:left; text-align:center;}
+.login-lock-icon		{ background-image:url(../images/lock.png); background-repeat:no-repeat;}
+.login-block p strong			{ color:#000;}
+.login-send				{ padding-top:97px;}
+.login-button			{ border:none; padding:7px !important; display:inline-block;/* width:50% !important;*/ font-size:16px; color:#fff;}
+.arow					{ background-image:url(../images/arow.png); background-repeat:no-repeat; height:36px;}
+.left-content-side .heading3,,.left-content-side h3,.payment h4, .payment heading4	, .gallery h4{  text-transform:uppercase; font-size:16px; font-weight:bold;}
+.left-content-side .heading3, .payment heading4	, .gallery h4{background:url(../images/welcome-icon.png) no-repeat left center; padding:15px 0 15px 60px;}
+.dropdown-menu>li>a			{ color:#000 !important;}
+.dropdown-menu				{ width:100%;}
+
+
+
+
+/*****************************MENU************************************/
+										
+.menu				{ font-size:15px;  font-weight:bold;}
+.menu a				{color:#fff !important;}
+.menu a:hover		{ background:#000 !important;}
+
+
+
+
+.login-form			{ width:100%; }
+
+
+
+
+
+.rotate img					{ width:100%; height:auto}
+
+
+.today-transation			{ background:url(../images/image2.jpg) no-repeat fixed 100%; background-size:cover; height:330px; background-size:;}
+.login-form					{ position:absolute; bottom:130px; padding:20px;}
+.contant					{ padding:20px 0;}
+
+.facebook ,.twitter					{ background:url(../images/fb.png) no-repeat; display:inline-block; width:27px; height:29px;}
+.twitter					{ background:url(../images/twitter-bottom.png) no-repeat;}
+.login-form .strong			{ font-weight:bold; color:#000;}
+.left-content-side p			{ padding-top:15px;}
+.log						{ position:relative;}
+.read-more					{ display:inline-block; }
+.read-more a				{display:block;width:auto !important; padding-left:30px; padding-right:30px;}
+
+
+
+
+
+/*****************************today-transation************************************/
+ .today-transation			{ text-align:center;}
+ .send-money				{ margin-top:40px; padding-bottom:20px;}
+  .today-transation h1				{ margin-top:35px;}
+  .send-money h4			{ font-weight:bold; font-size:18px;}
+  .payment a				{ color:#000;}
+
+
+  /*****************************banner***********************************/
+  .banner					{ height:107px; margin-top:50px; margin-bottom:15px;}	
+  .lap-with-girl			{ margin-top:-30px;}	
+  .middle-content h3			{ font-weight:bold; font-size:18px; margin-top:40px;}
+  .payment h4				{ padding-left:50px; background:url(../images/payment.png) no-repeat left center;}
+  .right-banner-image		{ margin-top:5px; text-align:right;}
+  	
+  /*****************************gallery***********************************/
+
+  .gallery .span2				{ width:20%; float:left;}
+.gallery h4					{background:url(../images/heart.png) no-repeat left center; padding-left:50px;  }
+
+
+/*****************************right-side************************************/
+.tap-money					{ font-size:15px; font-weight:bold;}
+.text-side					{ line-height:14px; padding:20px 10px;}
+img-side					{ background:url(../images/image-right-side.jpg) no-repeat ; height:300px; }
+.payment li					{ float:left; list-style:none; padding:10px; font-weight:bold;}
+.payment li					{  background-position:left center ; background-repeat:no-repeat ; padding-left:40px; margin-right:29px;
+ margin-top:20px; width:23%;}
+ .img-side, .text-side					{ width:227px; height:190px; float:left ; max-width:100%;}
+.img-side img						{ width:227px; height:190px; padding:0 !important; max-width:100%;}
+.for-more-contant				{ margin-top:30px; }
+.img-side				{ padding:0;}
+
+
+.payment li:first-child					{background-image:url(../images/building.png);}
+.payment li:nth-child(2)					{background-image:url(../images/pay-mobile-bill.png);}
+.payment li:nth-child(3)					{background-image:url(../images/card.png) ;}
+.payment li:nth-child(4)					{background-image:url(../images/payment2.png);}
+.payment li:nth-child(5)					{background-image:url(../images/pay-internet.png);}
+.payment li:nth-child(6)					{background-image:url(../images/pay.png);}
+.payment li:nth-child(7)					{background-image:url(../images/phone.png);}
+.payment li:nth-child(8)					{background-image:url(../images/pay-online-shopping.png);
+}
+
+
+
+/*****************************FOOTER************************************/
+
+  .footer					{ padding:15px 0; color:#fff; font-size:13px;}
+  .footer li					{ color:#fff; float:left; list-style:none; padding:0 5px; }
+  .social-icon				{ float:right;}
+    .footer a				{ color:#fff;}
+	
+	/********************************INNER-PAGE********************************/
+	.inner .acc-group h6, .heading6				{  font-weight:bold;}
+	.act-first									{ background:url(../images/about.png) no-repeat left center; }
+	.act-second									{ background:url(../images/save.png) no-repeat left center;}
+		.act-third									{ background:url(../images/refresh.png) no-repeat left center;}
+			.act-fourth							{ background:url(../images/accordian3.png) no-repeat left center;}
+			.act-ph									{ background:url(../images/accordian3.png) no-repeat left center; }
+			
+			.act-fivth							{ background:url(../images/accordian2.png) no-repeat left center;}
+			.act-fourth							{ background:url(../images/accordian1.png) no-repeat left center;}
+			.act-sixth							{ background:url(../images/accordian3.png) no-repeat left center;}
+		.inner .acc-group .accordion-toggle 								{padding:10px; padding-left:50px; }
+	.inner .acc-group 					{ margin-top:40px;}
+	.inner .acc-group .panel-heading						{ background:#c5c5c3; border-radius:0; border:none; box-shadow:0;
+	-webkit-box-shadow:0;}
+	.inner .acc-group .panel-default						{box-shadow:0; border:none; 
+	-webkit-box-shadow:0;}
+	.acc-group p						{ padding-top:0;}
+		.acc-group h6						{ margin-top:15px;}
+		.acc-group .accordion-toggle 			{ display:block;}
+		.acc-group .glyphicon					{ top:-20px;}
+		.accordion-toggle					{ font-weight:bold;}
+		.faq-content h3						{ font-weight:bold;}
+		.inner-log .login-form						{ bottom:20px;}
+		.top-inner-banner img					{ width:100%; height:auto;}
+		.toggleClass						{ background:#030}
+  
+  .hol label,   .date		 label					{ display:inline-block; min-width:200px;}
+#user .signUp							{ background:#}
+
+.secure span							{ display:inline-block;}
+.arw									{ position:static !important;}
+.secure li	, .term li							{  list-style:url(../images/ar.png);}
+.secure ul								{ padding-left:20px;}
+.content-contact							{ padding-left:50px;}
+.term ul							{ }
+.term li ul li						{ list-style:disc}
+.term li ul								{ padding-left:0; margin-top:15px; margin-bottom:15px;}
+.term h2				{ font-size:16px; color:#000; text-decoration:underline; font-weight:bold;}

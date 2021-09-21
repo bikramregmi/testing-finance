@@ -1,0 +1,28 @@
+description = 'TMK WALLET SERVICES'
+ext.artifactId = 'tmk-mbank-services'
+apply plugin: 'java'
+apply plugin: 'eclipse-wtp'
+
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+	compile 'org.springframework.ws:spring-ws-core:2.3.0.RELEASE'
+	compile 'org.slf4j:slf4j-api:1.7.22'
+	compile 'org.apache.poi:poi:3.14'
+	compile 'org.apache.httpcomponents:httpcore:4.4.9'
+	compile 'org.apache.httpcomponents:httpclient:4.5.5'
+	compile 'com.fasterxml.jackson.core:jackson-annotations:2.8.6'
+	compile 'org.json:json:20160810'
+	compile 'com.googlecode.json-simple:json-simple:1.1'
+	compile 'com.fasterxml.jackson.core:jackson-databind:2.8.1'
+	compile 'com.fasterxml.jackson.core:jackson-annotations:2.8.6'
+	compile 'org.json:json:20160810'
+	compile 'com.googlecode.json-simple:json-simple:1.1'
+	compile 'com.fasterxml.jackson.core:jackson-databind:2.8.1'
+	compile 'com.google.code.gson:gson:2.8.1'
+	
+}

@@ -1,0 +1,24 @@
+.forget-pass		{ border: 1px solid #ccc; background:#fff; margin-top:20px;}
+.middlealign		{ border:none;  width:50%; margin-bottom:30px;} 
+.ico-cancel		{ color:#FC0; font-size:30px;}
+body			{ background:#DEE7EF;}
+.button-side			{ }
+.ico-cancel {
+	color: #000000;
+	font-size: 20px;
+	border: 1px solid #333;
+	padding: 5px;
+	border-radius: 50%;
+}
+.button-side			{ background:#fff;}
+.login-frm-wallet input[type='text'],.login-frm-wallet input[type='password']{ width:100%;}
+.wallet-icon				{ text-align:center; margin-top:-16px}
+.heading2					{ text-align:center}
+.message			{  border: 1px solid #ccc; background:#fff;  margin-top:72px; min-height: 330px;}
+
+.sub-btn { width:70%; margin-top:20px; margin-bottom:15px;}
+.table-bal	td		{ padding:7px 0; border-bottom:1px solid #ccc;} 
+.table-bal .heading2		{
+	margin-top:0; padding-top:0;
+} 
+.wallet-payment	.message	{ padding-bottom:15px;}

@@ -1,0 +1,114 @@
+@CHARSET "UTF-8";
+
+.main_container .top_nav {
+	margin-left: 0px;
+}
+
+body.nav-md .container.body .right_col {
+	margin-left: 0px;
+}
+
+.top_nav .navbar-right {
+	width: 100%;
+}
+
+.top_nav .navbar-right>.mbank-logo {
+	float: left;
+}
+
+.site_title#titleBar {
+	cursor:pointer;
+}
+
+.site_title#titleBar i {
+	font-size: 35px;
+}
+
+.site_title#titleLogo {
+}
+
+.site_title#titleLogo img {
+	margin-top: 3px;
+}
+
+.sidebar {
+	left: -200px;
+	width: 200px;
+	height: 100%;
+	background-color: #fff;
+	transition-duration: 0.5s;
+	position: absolute;
+	z-index: 10000;
+	background: linear-gradient(to bottom right, #18964f, #72cb88);
+	transition: all 1s ease-out;
+	-ms-transform: translateX(-200px);
+	-webkit-transform: translateX(-200px);
+	transform: translateX(-200px);
+}
+
+.sidebar.active {
+	-ms-transform: translateX(200px);
+	-webkit-transform: translateX(200px);
+	transform: translateX(200px);
+	transition-duration: 0.5s;
+}
+
+.site_title#titleBar.active {
+	-ms-transform: translateX(200px);
+	-webkit-transform: translateX(200px);
+	transform: translateX(200px);
+	transition-duration: 0.5s;
+}
+
+.sidebar-close {
+	font-size: 35px;
+	color: #F2F5F7;
+	float: right;
+	margin-right: 10px;
+	margin-top:8px;
+	cursor: pointer;
+}
+
+.sidebar>.menu-list {
+	margin: 0;
+	padding: 0;
+	margin-top: 20px;
+	list-style-type: none;
+}
+
+.sidebar .sub-menu-list {
+	margin: 0;
+	padding: 0;
+	margin-top: 20px;
+	list-style-type: none;
+}
+
+.sidebar>.menu-list>.menu {
+	padding: 10px;
+	cursor: pointer;
+}
+
+.sidebar>.menu-list>.menu>a>i {
+	margin-right: 15px;
+	font-size: 20px;
+}
+.sidebar>.menu-list>.menu>a>i.fa-angle-down{
+	    float: right;
+    line-height: 1.2;
+}
+
+.sidebar>.menu-list>.menu:hover {
+	background: #26834b;
+}
+
+.sidebar>.menu-list>.menu>a {
+	margin: 10px;
+	font-size: 15px;
+	color: #F2F5F7;
+	text-decoration: none;
+}
+
+.mbank-logo {
+	margin-left: 10px;
+	line-height: 5;
+}
