@@ -12,30 +12,31 @@
 		configure as beans -->
 
 <!--     Heroku deployment-->
-	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"
 		destroy-method="close">
-		<property name="driverClass" value="com.mysql.jdbc.Driver" />
-		<property name="jdbcUrl" value="jdbc:mysql://gwbtbbyzo5f6cvim:rowm8gsqdtka28ub@esilxl0nthgloe1y.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/woqidnraprw3yc7r?UseUnicode=true&amp;characterEncoding=utf8" />
-		<!-- local server credentials -->
-		<property name="user" value="gwbtbbyzo5f6cvim" />
-		<property name="password" value="rowm8gsqdtka28ub" />
+<!--		<property name="driverClass" value="com.mysql.jdbc.Driver" />-->
+<!--		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/heroku_816e29eaa970641" />-->
+		<property name="url" value="jdbc:mysql://eu-cdbr-west-01.cleardb.com:3306/heroku_816e29eaa970641?reconnect=true" />
+		<!-- local server credentials bd08666f5a58c4 6515f8c4 -->
+		<property name="username" value="bd08666f5a58c4" />
+		<property name="password" value="6515f8c4" />
 
 	 	<!-- test server credentials -->
-		<!-- <property name="user" value="root" />
-		<property name="password" value="root#321" /> -->
+<!--		 <property name="user" value="root" />-->
+<!--		<property name="password" value="" />-->
 		
 		<!-- live server credentials -->
 		<!-- <property name="user" value="root" /> 
 		<property name="password" value="root"/> -->
 
-		<property name="minPoolSize" value="10" />
-		<property name="maxPoolSize" value="100" />
-		<property name="maxStatementsPerConnection" value="15" />
-		<property name="idleConnectionTestPeriod" value="3000" />
-		<property name="acquireIncrement" value="1" />
-		<property name="acquireRetryAttempts" value="3" />
-		<property name="acquireRetryDelay" value="300" />
-		<property name="initialPoolSize" value="3" />
+<!--		<property name="minPoolSize" value="10" />-->
+<!--		<property name="maxPoolSize" value="100" />-->
+<!--		<property name="maxStatementsPerConnection" value="15" />-->
+<!--		<property name="idleConnectionTestPeriod" value="3000" />-->
+<!--		<property name="acquireIncrement" value="1" />-->
+<!--		<property name="acquireRetryAttempts" value="3" />-->
+<!--		<property name="acquireRetryDelay" value="300" />-->
+<!--		<property name="initialPoolSize" value="3" />-->
 		
 		
 	</bean>
@@ -116,13 +117,13 @@
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
 
 				<prop key="hibernate.show_sql">false</prop>
-<!--				<prop key="hibernate.hbm2ddl.auto">update</prop>-->
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
 				<prop key="hibernate.connection.useUnicode">true</prop>
                 <prop key="hibernate.connection.characterEncoding">utf8</prop>
                 <prop key="hibernate.connection.CharSet">utf8</prop>
 			</props>
 		</property>
-		<property name="persistenceUnitName" value="tmkmobilebanking" />
+		<property name="persistenceUnitName" value="heroku_816e29eaa970641" />
 			
 	</bean>
 

@@ -11,10 +11,10 @@
 <!-- 		<constructor-arg ref="passwordEncoder" /> -->
 <!-- 	</bean> -->
 
-<bean id="adminCreator" class="com.mobilebanking.startup.FirstAdminCreator"
+<!--<bean id="adminCreator" class="com.mobilebanking.startup.FirstAdminCreator"
 		init-method="create" >
 		<constructor-arg ref="userRepository" />
 		<constructor-arg ref="passwordEncoder" />
-</bean>
+</bean>-->
 
 </beans>

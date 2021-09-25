@@ -1,17 +1,6 @@
 package com.mobilebanking.startup;
 
 
-import java.util.Date;
-import java.util.List;
-import java.util.TimeZone;
-
-import javax.annotation.PostConstruct;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
-
 import com.mobilebanking.api.IGeneralSettingsApi;
 import com.mobilebanking.entity.Account;
 import com.mobilebanking.entity.Country;
@@ -19,14 +8,18 @@ import com.mobilebanking.entity.User;
 import com.mobilebanking.model.AccountType;
 import com.mobilebanking.model.Status;
 import com.mobilebanking.model.UserType;
-import com.mobilebanking.repositories.AccountRepository;
-import com.mobilebanking.repositories.CountryRepository;
-import com.mobilebanking.repositories.CustomerRepository;
-import com.mobilebanking.repositories.GeneralSettingsRepository;
-import com.mobilebanking.repositories.UserRepository;
-import com.mobilebanking.repositories.UserTemplateRepository;
+import com.mobilebanking.repositories.*;
 import com.mobilebanking.util.Authorities;
 import com.mobilebanking.util.StringConstants;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+import javax.annotation.PostConstruct;
+import java.util.Date;
+import java.util.List;
+import java.util.TimeZone;
 
 
 
@@ -66,7 +59,7 @@ public class FirstAdminCreator /*implements WebApplicationInitializer*/{
 	public void create() {
 		
 		
-		menuCreation.startupCreator();
+//		menuCreation.startupCreator();
 		TimeZone timeZone = TimeZone.getTimeZone("Asia/Kathmandu");
 		logger.debug("tz==>" + timeZone);
 		logger.debug("tz.getId()==>" + timeZone.getID());
@@ -156,7 +149,7 @@ public class FirstAdminCreator /*implements WebApplicationInitializer*/{
 		}
 	}
 
-	@PostConstruct
+	/*@PostConstruct
 	public void createParkingAccount() {
 		Account account = accountRepository.findAccountByAccountNumber("parkingAccount");
 
@@ -184,7 +177,7 @@ public class FirstAdminCreator /*implements WebApplicationInitializer*/{
 			accountRepository.save(account);
 		}
 
-	}
+	}*/
 /*
 	@Override
 	public void onStartup(ServletContext servletContext) throws ServletException {

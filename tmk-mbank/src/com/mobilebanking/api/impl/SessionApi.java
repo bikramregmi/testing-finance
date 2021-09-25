@@ -1,9 +1,13 @@
 package com.mobilebanking.api.impl;
 
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-
+import com.mobilebanking.api.ISessionApi;
+import com.mobilebanking.entity.User;
+import com.mobilebanking.entity.UserSession;
+import com.mobilebanking.model.UserSessionDTO;
+import com.mobilebanking.repositories.UserRepository;
+import com.mobilebanking.repositories.UserSessionRepository;
+import com.mobilebanking.session.UserDetailsWrapper;
+import com.mobilebanking.util.ConvertUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
@@ -14,14 +18,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.mobilebanking.api.ISessionApi;
-import com.mobilebanking.entity.User;
-import com.mobilebanking.entity.UserSession;
-import com.mobilebanking.model.UserSessionDTO;
-import com.mobilebanking.repositories.UserRepository;
-import com.mobilebanking.repositories.UserSessionRepository;
-import com.mobilebanking.session.UserDetailsWrapper;
-import com.mobilebanking.util.ConvertUtil;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 @Service
 @Transactional
@@ -89,7 +88,7 @@ public class SessionApi implements ISessionApi, InitializingBean {
 		Calendar c = Calendar.getInstance();
 		c.setTime(new Date());
 		c.add(Calendar.MINUTE, -sessionExpirtyTime);
-		userSessionRepository.deleteExpiredSessions(c.getTime());
+//		userSessionRepository.deleteExpiredSessions(c.getTime());
 
 	}
 
