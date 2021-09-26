@@ -7,13 +7,13 @@
     <version>1.0</version>
     <packaging>war</packaging>
     <dependencies>
-        <dependency>
+       <!-- <dependency>
             <groupId>mbank</groupId>
             <artifactId>tmk-mbank-services</artifactId>
             <version>unspecified</version>
             <scope>compile</scope>
-        </dependency>
-        <dependency>
+        </dependency>-->
+       <!-- <dependency>
             <groupId>net.sf.dozer</groupId>
             <artifactId>dozer</artifactId>
             <version>5+</version>
@@ -24,7 +24,7 @@
                     <groupId>commons-collections</groupId>
                 </exclusion>
             </exclusions>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>antlr</groupId>
             <artifactId>antlr</artifactId>
@@ -37,11 +37,23 @@
             <version>1.0</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
+       <!-- <dependency>
+            <groupId>net.sf.jasperreports</groupId>
+            <artifactId>jasperreports</artifactId>
+            <version>6.12.1</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.lowagie</groupId>
+                    <artifactId>itext</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>-->
+        <!--        "jasperreports" can't resolve "itext" dependency on jenkins.so it added independently-->
+       <!-- <dependency>
             <groupId>com.lowagie</groupId>
             <artifactId>itext</artifactId>
             <version>2.1.7</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>c3p0</groupId>
             <artifactId>c3p0</artifactId>
@@ -600,7 +612,7 @@
             <version>4.2.1</version>
             <scope>compile</scope>
         </dependency>-->
-        <dependency>
+       <!-- <dependency>
             <groupId>ar.com.fdvs</groupId>
             <artifactId>DynamicJasper</artifactId>
             <version>5+</version>
@@ -627,7 +639,7 @@
                     <groupId>commons-collections</groupId>
                 </exclusion>
             </exclusions>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
