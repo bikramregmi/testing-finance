@@ -8,7 +8,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>mBank - Next Generation Mobile Banking</title>
+    <title>finance</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="shortcut icon" href="/images/favicon.ico">
@@ -36,7 +36,7 @@
     
     <div class="pre-loader">
         <div class="load-con">
-            <img src="assets/img/logo-white.png" class="animated fadeInDown" alt="">
+            <img src="assets/img/hand.png" class="animated fadeInDown" alt="">
             <div class="spinner">
               <div class="bounce1"></div>
               <div class="bounce2"></div>
@@ -55,7 +55,7 @@
                             <span class="fa fa-bars fa-lg"></span>
                         </button>
                         <a class="navbar-brand" href="">
-                            mBank
+                            finance
                         </a>
                     </div>
 
@@ -63,7 +63,7 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#about">mBank</a>
+                            <li><a href="#about">finance</a>
                             </li>
                             <li><a href="#features">features</a>
                             </li>
@@ -105,7 +105,7 @@
                             data-speed="1000"
                             data-start="700"
                             data-easing="Power4.easeOut">
-                            <img src="assets/img/hand-mbank.png" alt="">
+                            <img src="assets/img/hand.png" alt="">
                         </div>
 
                         <div class="tp-caption lfl fadeout visible-xs"
@@ -153,7 +153,7 @@
                             data-speed="1000"
                             data-start="700"
                             data-easing="Power4.easeOut">
-                            <img src="assets/img/hand-mbank-2.png" width="480" alt="">
+                            <img src="assets/img/hand-2.png" width="480" alt="">
                         </div>
 
                         
@@ -664,7 +664,7 @@
         <footer>
             <div class="container">
                 <a href="#" class="scrollpoint sp-effect3">
-                    <img src="assets/img/logo-white.png" width="100" alt="" class="logo">
+                    <img src="assets/img/hand.png" width="100" alt="" class="logo">
                 </a>
                 <div class="social">
                     <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-twitter fa-lg"></i></a>

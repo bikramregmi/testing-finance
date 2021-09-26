@@ -12,7 +12,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <head>
 <meta charset="UTF-8">
-<title>mBank Login</title>
+<title>Finance Login</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <link rel="shortcut icon" href="/images/favicon.ico">
@@ -47,7 +47,7 @@
 <body>
 	<div class="pre-loader">
 		<div class="load-con">
-			<img src="assets/img/logo-white.png" class="animated fadeInDown" alt="">
+			<img src="assets/img/hand.png" class="animated fadeInDown" alt="">
 			<div class="spinner">
 				<div class="bounce1"></div>
 				<div class="bounce2"></div>
@@ -69,7 +69,7 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="${pageContext.request.contextPath}/main#about">mBank</a></li>
+						<li><a href="${pageContext.request.contextPath}/main#about">finance</a></li>
 						<li><a href="${pageContext.request.contextPath}/main#features">features</a></li>
 						<li><a href="${pageContext.request.contextPath}/main#reviews">Testimonials</a></li>
 						<li><a href="${pageContext.request.contextPath}/main#demo">demo</a></li>
@@ -91,13 +91,13 @@
 						<!-- MAIN IMAGE --> <img src="assets/img/transparent.png" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat"> <!-- LAYERS -->
 						<!-- LAYER NR. 1 -->
 						<div class="tp-caption lfl fadeout" data-x="left" data-y="bottom" data-hoffset="30" data-voffset="0" data-speed="500" data-start="700" data-easing="Power4.easeOut ">
-							<img src="assets/img/hand-mbank-login.png" alt="">
+<%--							<img src="assets/img/hand-login.png" alt="">--%>
 						</div>
 
 
 						<div class="tp-caption sfb tp-image" data-x="650" data-y="center" data-hoffset="0" data-voffset="-100" data-speed="900" data-start="1700"
 							data-easing="Power4.easeOut">
-							<a><img src="assets/img/logo-white.png" width="200" alt=""></a>
+							<a><img src="assets/img/hand.png" width="100" alt=""></a>
 							<h3 class="text-white">Please Log In</h3>
 							<br>
 						</div>

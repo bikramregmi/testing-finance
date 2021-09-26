@@ -9,7 +9,7 @@
         <meta name="description" content="A Bootstrap based app landing page template">
         <meta name="author" content="">
 
-        <title>Hamro Technologies Pvt. Ltd </title>
+        <title>Finance Company </title>
 
     </head>
 
@@ -45,9 +45,9 @@
 
         <footer class="login-footer text-center">
             
-             <span class="copyright">© 2017  All Rights Reserved.</span>
-    <a href="#" target="_blank" class="text-black text-sm">Powered by : Hamro Technologies Pvt. Ltd.</a>
-  <p>  <span><img src="images/ht_logo.png" height="50" width="100" alt="" /></span></p>
+             <span class="copyright">ï¿½ 2021  All Rights Reserved.</span>
+    <a href="#" target="_blank" class="text-black text-sm">Powered by : Finance Company</a>
+  <p>  <span><img src="images/hand.png" height="50" width="100" alt="" /></span></p>
         </footer>
 
     </body>

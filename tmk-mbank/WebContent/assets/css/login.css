@@ -119,7 +119,7 @@ header .navbar-default ul.navbar-nav li a:focus {
 }
 header .navbar-default .navbar-brand {
 
-  background: url('../img/logo-white.png') no-repeat center center;
+  background: url('../img/hand.png') no-repeat center center;
   
   background-size: 170px;
   text-indent: -100000px;
@@ -755,7 +755,7 @@ form textarea.form-control {
   }
 }
 header {
-  background: url('../img/bg-header.jpg') no-repeat -200px -80px #336d63;
+  background: url('../img/background-color.jpg') no-repeat -200px -80px #336d63;
 
  
 }

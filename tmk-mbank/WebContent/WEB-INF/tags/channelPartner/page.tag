@@ -131,7 +131,7 @@
 			</div>
 			<div class="sidebar" id="channelSideBar">
 			<span class="sidebar-close" id="sidebarClose"><i class="fa fa-times" id="sideBarKey"></i></span>
-			<span class="mbank-logo"><img src="/assets/img/logo-white.png" height="60" width="120" alt=""/></span>
+			<span class="mbank-logo"><img src="/assets/img/hand.png" height="60" width="120" alt=""/></span>
 			<ul class="menu-list">
 				<li class="menu"><a href="/"><i class="fa fa-home"></i> Dashboard</a></li>
 				<li class="menu"><a href="/listBank"><i class="fa fa-university"></i> Bank</a></li>

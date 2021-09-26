@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="/css/static-error-page.css">
 </head>
 <body>
-	<img src="/assets/img/logo-white.png" alt="MBank Logo">
+	<img src="/assets/img/hand.png" alt="MBank Logo">
 	<h1>404</h1>
 	<div class="container">
 		<h3>The page could not be found or you don't have permission to view it.</h3>

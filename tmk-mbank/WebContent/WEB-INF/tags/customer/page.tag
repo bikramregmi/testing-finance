@@ -253,7 +253,7 @@
 			<div class="col-md-3 left_col">
 				<div class="left_col scroll-view">
 					<div class="navbar nav_title" style="border: 0;">
-						<a href="/" class="site_title"> <span><img src="/assets/img/logo-white.png" height="60" width="120" alt="" /></span></a>
+						<a href="/" class="site_title"> <span><img src="/assets/img/hand.png" height="60" width="120" alt="" /></span></a>
 					</div>
 					<div class="clearfix"></div>
 					<div id="sidebar-menu" class="main_menu_side hidden-print main_menu" style="margin-top: 10px;">

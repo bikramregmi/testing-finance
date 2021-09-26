@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="/css/static-error-page.css">
 </head>
 <body>
-	<img src="/assets/img/logo-white.png" alt="MBank Logo">
+	<img src="/assets/img/portfolio.png" alt="MBank Logo">
 	<h1>400</h1>
 	<div class="container">
 		<h3>Something went wrong.</h3>

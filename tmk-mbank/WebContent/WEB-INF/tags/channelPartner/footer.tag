@@ -5,7 +5,7 @@
 		<div class="pull-right">
 			<div>
 				<p>
-					Powered By: <img src="/images/ht_logo.png" height="30px" width="75px" alt="HT LOGO">
+					Powered By: <img src="/images/hand.png" height="30px" width="75px" alt="HT LOGO">
 				</p>
 			</div>
 		</div>

@@ -159,7 +159,7 @@
                     <div class="tp-caption lfb fadeout hidden-xs" data-x="center" data-y="bottom" data-hoffset="-300"
                          data-voffset="80" data-speed="1000" data-start="700"
                          data-easing="Power4.easeOut">
-<%--                        <img src="assets/img/hand-mbank-2.png" width="480" alt="">--%>
+<%--                        <img src="assets/img/hand-2.png" width="480" alt="">--%>
                     </div>
 
 
@@ -619,11 +619,11 @@
                                 </a>
                                 <div class="media-body">
                                     <h4 class="media-heading">
-                                        <a href="mailto:bikramregmi13@gmail.com">bikramregmi13@gmail.com</a>
+                                        <a href="mailto:bikramregmi13@gmail.com">finance@gmail.com</a>
                                     </h4>
 
                                     <h4 class="media-heading">
-                                        <a href="mailto:bikramregmi13@gmail.com">bikramregmi13@gmail.com</a>
+                                        <a href="mailto:bikramregmi13@gmail.com">finance@gmail.com</a>
                                     </h4>
 
 

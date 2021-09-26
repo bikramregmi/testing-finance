@@ -10,7 +10,7 @@
 <input id="firstLogin" type="hidden" value="${firstLogin}" />
 <spr:page header1="DashBoard">
 
-	<!-- added by amrit -->
+	<!-- added -->
 	<div class="dropdown pull-right" ng-controller="reportController">
 		<a class="btn btn-info" data-toggle="dropdown" ng-click="getDataForReport('businessSummary')"><i class="fa fa-download small" title="Download Business Summary"></i></a>
 		<ul class="dropdown-menu">
@@ -99,7 +99,7 @@
 		<li class="${daily }" style="color: #0000FF"><a href="${pageContext.request.contextPath}/today_dashboard">Daily</a></li>
 
 	</ul>
-	<!-- end added by amrit -->
+	<!-- end added  -->
 	<div class="row tile_count">
 		<div class="row">
 			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">

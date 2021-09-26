@@ -1,140 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
-	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
-		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd	
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+
+
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd"
-	default-autowire="byName">
+       default-autowire="byName">
 
-	<!-- Scans within the base package of the application for @Components to 
-		configure as beans -->
+    <!-- Scans within the base package of the application for @Components to
+        configure as beans -->
 
-<!--     Heroku deployment-->
-	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"
-		destroy-method="close">
-<!--		<property name="driverClass" value="com.mysql.jdbc.Driver" />-->
-<!--		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/heroku_816e29eaa970641" />-->
-		<property name="url" value="jdbc:mysql://eu-cdbr-west-01.cleardb.com:3306/heroku_816e29eaa970641?reconnect=true" />
-		<!-- local server credentials bd08666f5a58c4 6515f8c4 -->
-		<property name="username" value="bd08666f5a58c4" />
-		<property name="password" value="6515f8c4" />
+    <!--     Heroku deployment-->
+    <!--<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+          destroy-method="close">
+    &lt;!&ndash; local server credentials bd08666f5a58c4 6515f8c4 &ndash;&gt;
+    <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+    <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/heroku_816e29eaa970641"/>
+    <property name="user" value="root"/>
+    <property name="password" value=""/>-->
 
-	 	<!-- test server credentials -->
-<!--		 <property name="user" value="root" />-->
-<!--		<property name="password" value="" />-->
-		
-		<!-- live server credentials -->
-		<!-- <property name="user" value="root" /> 
-		<property name="password" value="root"/> -->
+    <!-- test server credentials -->
+    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"
+          destroy-method="close">
+        <property name="url"
+                  value="jdbc:mysql://eu-cdbr-west-01.cleardb.com:3306/heroku_816e29eaa970641?reconnect=true"/>
+        <property name="username" value="bd08666f5a58c4"/>
+        <property name="password" value="6515f8c4"/>
 
-<!--		<property name="minPoolSize" value="10" />-->
-<!--		<property name="maxPoolSize" value="100" />-->
-<!--		<property name="maxStatementsPerConnection" value="15" />-->
-<!--		<property name="idleConnectionTestPeriod" value="3000" />-->
-<!--		<property name="acquireIncrement" value="1" />-->
-<!--		<property name="acquireRetryAttempts" value="3" />-->
-<!--		<property name="acquireRetryDelay" value="300" />-->
-<!--		<property name="initialPoolSize" value="3" />-->
-		
-		
-	</bean>
-	<!-- <bean id="entityManagerFactory" -->
-	<!-- class="com.remittance.jpa.monitor.JavamelodyContainerEntityManagerFactoryBean"> -->
-	<!-- <property name="jpaVendorAdapter"> -->
-	<!-- <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"> -->
-	<!-- <property name="showSql" value="true" /> -->
-	<!-- <property name="generateDdl" value="false"/> -->
-	<!-- <property name="databasePlatform" value="org.hibernate.dialect.MySQL5Dialect" 
-		/> -->
-	<!-- </bean> -->
-	<!-- </property> -->
-	<!-- <property name="persistenceUnitName" value="remittance"/> -->
-	<!-- </bean> -->
+        <!-- live server credentials -->
+        <!-- <property name="user" value="root" />
+        <property name="password" value="root"/> -->
 
-	<!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> -->
-	<!-- <property name="driverClassName" value="org.postgresql.Driver"/> -->
-	<!-- <property name="url" value="jdbc:postgresql://localhost:5432/postgres"/> -->
-	<!-- <property name="username" value="postgres"/> -->
-	<!-- <property name="password" value="123456"/> -->
-	<!-- </bean> -->
+        <!--		<property name="minPoolSize" value="10" />-->
+        <!--		<property name="maxPoolSize" value="100" />-->
+        <!--		<property name="maxStatementsPerConnection" value="15" />-->
+        <!--		<property name="idleConnectionTestPeriod" value="3000" />-->
+        <!--		<property name="acquireIncrement" value="1" />-->
+        <!--		<property name="acquireRetryAttempts" value="3" />-->
+        <!--		<property name="acquireRetryDelay" value="300" />-->
+        <!--		<property name="initialPoolSize" value="3" />-->
 
 
+    </bean>
+    <!-- <bean id="entityManagerFactory" -->
+    <!-- class="com.remittance.jpa.monitor.JavamelodyContainerEntityManagerFactoryBean"> -->
+    <!-- <property name="jpaVendorAdapter"> -->
+    <!-- <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"> -->
+    <!-- <property name="showSql" value="true" /> -->
+    <!-- <property name="generateDdl" value="false"/> -->
+    <!-- <property name="databasePlatform" value="org.hibernate.dialect.MySQL5Dialect"
+        /> -->
+    <!-- </bean> -->
+    <!-- </property> -->
+    <!-- <property name="persistenceUnitName" value="remittance"/> -->
+    <!-- </bean> -->
 
-	<!-- <bean class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" 
-		id="dataSource"> -->
-
-	<!-- <property name="url" value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() 
-		+ ':' + @dbUrl.getPort() + @dbUrl.getPath() }"/> -->
-	<!-- <property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0] 
-		}"/> -->
-	<!-- <property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] 
-		}"/> -->
-	<!-- </bean> -->
-
-
-
-
-
-
-	<!-- <bean id="entityManagerFactory" -->
-	<!-- class="com.remittance.jpa.monitor.JavamelodyContainerEntityManagerFactoryBean"> -->
-	<!-- <property name="jpaVendorAdapter"> -->
-	<!-- <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"> -->
-	<!-- <property name="showSql" value="false" /> -->
-	<!-- <property name="generateDdl" value="false"/> -->
-	<!-- <property name="databasePlatform" value="org.hibernate.dialect.MySQL5Dialect" 
-		/> -->
-	<!-- </bean> -->
-	<!-- </property> -->
-	<!-- <property name="persistenceUnitName" value="remittance"/> -->
-	<!-- </bean> -->
-	<!-- <bean class="java.net.URI" id="dbUrl"> -->
-	<!-- <constructor-arg value="#{systemEnvironment['DATABASE_URL']}"/> -->
-	<!-- </bean> -->
-
-	<!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"> -->
-	<!-- <property name="url" -->
-	<!-- value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + ':' + @dbUrl.getPort() 
-		+ @dbUrl.getPath() }" /> -->
-	<!-- <property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0] 
-		}" /> -->
-	<!-- <property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] 
-		}" /> -->
-	<!-- </bean> -->
+    <!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> -->
+    <!-- <property name="driverClassName" value="org.postgresql.Driver"/> -->
+    <!-- <property name="url" value="jdbc:postgresql://localhost:5432/postgres"/> -->
+    <!-- <property name="username" value="postgres"/> -->
+    <!-- <property name="password" value="123456"/> -->
+    <!-- </bean> -->
 
 
-	<bean id="entityManagerFactory"
-		class="com.mobilebanking.jpa.monitor.JavamelodyContainerEntityManagerFactoryBean">
-		<property name="dataSource" ref="dataSource" />
-		<property name="jpaVendorAdapter">
-			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
-		</property>
-		<property name="jpaProperties">
-			<props>
-				<!-- <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop> -->
-				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+    <!-- <bean class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
+        id="dataSource"> -->
 
-				<prop key="hibernate.show_sql">false</prop>
-				<prop key="hibernate.hbm2ddl.auto">update</prop>
-				<prop key="hibernate.connection.useUnicode">true</prop>
+    <!-- <property name="url" value="#{ 'jdbc:postgresql://' + @dbUrl.getHost()
+        + ':' + @dbUrl.getPort() + @dbUrl.getPath() }"/> -->
+    <!-- <property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0]
+        }"/> -->
+    <!-- <property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1]
+        }"/> -->
+    <!-- </bean> -->
+
+
+    <!-- <bean id="entityManagerFactory" -->
+    <!-- class="com.remittance.jpa.monitor.JavamelodyContainerEntityManagerFactoryBean"> -->
+    <!-- <property name="jpaVendorAdapter"> -->
+    <!-- <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"> -->
+    <!-- <property name="showSql" value="false" /> -->
+    <!-- <property name="generateDdl" value="false"/> -->
+    <!-- <property name="databasePlatform" value="org.hibernate.dialect.MySQL5Dialect"
+        /> -->
+    <!-- </bean> -->
+    <!-- </property> -->
+    <!-- <property name="persistenceUnitName" value="remittance"/> -->
+    <!-- </bean> -->
+    <!-- <bean class="java.net.URI" id="dbUrl"> -->
+    <!-- <constructor-arg value="#{systemEnvironment['DATABASE_URL']}"/> -->
+    <!-- </bean> -->
+
+    <!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"> -->
+    <!-- <property name="url" -->
+    <!-- value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + ':' + @dbUrl.getPort()
+        + @dbUrl.getPath() }" /> -->
+    <!-- <property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0]
+        }" /> -->
+    <!-- <property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1]
+        }" /> -->
+    <!-- </bean> -->
+
+
+    <bean id="entityManagerFactory"
+          class="com.mobilebanking.jpa.monitor.JavamelodyContainerEntityManagerFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
+        </property>
+        <property name="jpaProperties">
+            <props>
+                <!-- <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop> -->
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+
+                <prop key="hibernate.show_sql">false</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+                <prop key="hibernate.connection.useUnicode">true</prop>
                 <prop key="hibernate.connection.characterEncoding">utf8</prop>
                 <prop key="hibernate.connection.CharSet">utf8</prop>
-			</props>
-		</property>
-		<property name="persistenceUnitName" value="heroku_816e29eaa970641" />
-			
-	</bean>
+            </props>
+        </property>
+        <property name="persistenceUnitName" value="heroku_816e29eaa970641"/>
 
-	<bean class="org.springframework.orm.hibernate4.HibernateExceptionTranslator" />
+    </bean>
 
-	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
-		<property name="entityManagerFactory" ref="entityManagerFactory"></property>
-	</bean>
+    <bean class="org.springframework.orm.hibernate4.HibernateExceptionTranslator"/>
 
-	<tx:annotation-driven />
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory"></property>
+    </bean>
 
-	<bean
-		class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+    <tx:annotation-driven/>
+
+    <bean
+            class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor"/>
 </beans>
