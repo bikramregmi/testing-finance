@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'financetesting'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0B2247BB1831479EAA9B8F12C3C8FC21 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_342F17D0871743B08BB5BEF27DDAE977 }}
           package: '*.war'
