@@ -3,6 +3,7 @@ ext.artifactId = 'tmk-mbank'
 apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'eclipse-wtp'
+apply plugin: 'maven'
 
 war.archiveName "ROOT.war"
 ext.springVersion = '3.1.2.RELEASE'
@@ -19,26 +20,11 @@ buildscript {
 ext.GradleVersion = '2.11'
 
 }
-plugins {
- id "com.microsoft.azure.azurewebapp" version "1.1.0"
-}
-azurewebapp {
- subscription = 'Azure subscription 1'
- resourceGroup = 'finance'
- appName = 'financetesting'
- pricingTier = 'P1v2'
- region = 'westus'
- runtime {
-  os = 'Linux'
-  webContainer = 'Tomcat 9.0'
-  javaVersion = 'Java 8'
- }
-}
 
 
 test {
-    maxHeapSize = "1024m"
-    jvmArgs "-XX:MaxPermSize=512m"
+    maxHeapSize = "5024m"
+    jvmArgs "-XX:MaxPermSize=5012m"
 }
 
 
