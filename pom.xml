@@ -6,6 +6,9 @@
     <artifactId>tmk-mbank</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
+    <properties>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+    </properties>
     <dependencies>
        <!-- <dependency>
             <groupId>mbank</groupId>
