@@ -11,29 +11,27 @@
     <!-- Scans within the base package of the application for @Components to
         configure as beans -->
 
-    <!--     Heroku deployment-->
-    <!--<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
-          destroy-method="close">
-    &lt;!&ndash; local server credentials bd08666f5a58c4 6515f8c4 &ndash;&gt;
-    <property name="driverClass" value="com.mysql.jdbc.Driver"/>
-    <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/heroku_816e29eaa970641"/>
-    <property name="user" value="root"/>
-    <property name="password" value=""/>-->
-<!--    for azure-->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
           destroy-method="close">
-    <property name="driverClass" value="com.mysql.jdbc.Driver"/>
-    <property name="jdbcUrl" value="jdbc:mysql://financetesting.mysql.database.azure.com:3306/financeazureserver?useSSL=true"/>
-    <property name="user" value="financetesting"/>
-    <property name="password" value="Thisismypassword@123"/>
-<!--    String url="jdbc:mysql://financetesting.mysql.database.azure.com:3306/financeazureserver?useSSL=true";myDbConn=DriverManager.getConnection(url, "financetesting", "Thisismypassword@123");-->
-    <!-- test server credentials -->
-    <!--<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"
-          destroy-method="close">
-        <property name="url"
-                  value="jdbc:mysql://eu-cdbr-west-01.cleardb.com:3306/heroku_816e29eaa970641?reconnect=true"/>
-        <property name="username" value="bd08666f5a58c4"/>
-        <property name="password" value="6515f8c4"/>-->
+        <!--    local server credentials bd08666f5a58c4 6515f8c4 -->
+       <!-- <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/heroku_816e29eaa970641"/>
+        <property name="user" value="root"/>
+        <property name="password" value=""/>-->
+        <!--    for azure-->
+         <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+         <property name="jdbcUrl" value="jdbc:mysql://financetesting.mysql.database.azure.com:3306/financeazureserver?useSSL=true"/>
+         <property name="user" value="financetesting"/>
+         <property name="password" value="Thisismypassword@123"/>
+        <!--     Heroku deployment-->
+        <!--    String url="jdbc:mysql://financetesting.mysql.database.azure.com:3306/financeazureserver?useSSL=true";myDbConn=DriverManager.getConnection(url, "financetesting", "Thisismypassword@123");-->
+        <!-- test server credentials -->
+        <!--<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"
+              destroy-method="close">
+            <property name="url"
+                      value="jdbc:mysql://eu-cdbr-west-01.cleardb.com:3306/heroku_816e29eaa970641?reconnect=true"/>
+            <property name="username" value="bd08666f5a58c4"/>
+            <property name="password" value="6515f8c4"/>-->
 
         <!-- live server credentials -->
         <!-- <property name="user" value="root" />

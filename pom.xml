@@ -261,12 +261,12 @@
             <version>1.0</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
+       <!-- <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>jcl-over-slf4j</artifactId>
             <version>1.6.1</version>
             <scope>compile</scope>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>jfree</groupId>
             <artifactId>jcommon</artifactId>
